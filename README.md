@@ -1,0 +1,2 @@
+# TeamManager
+JavaScript SinglePageApplication
