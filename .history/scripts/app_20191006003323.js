@@ -9,4 +9,4 @@ const app = Sammy('#mainElement', function() {
 
 (() => {
     app.run('#/home');
-})();
+});
