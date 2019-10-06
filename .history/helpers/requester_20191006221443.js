@@ -24,7 +24,7 @@ const requester = function() {
     const makeRequest = function(url, headers) {
         headers.headers['Content-Type'] = 'application/json';
         // TODO: Authorization Kinvey
-        fetch(url, headers);
+        return fetch(url, headers);
     };
 
     return {

@@ -18,11 +18,7 @@ const userController = function() {
     };
 
     const postRegister = function(context) {
-        userModel.register(context.params)
-            .then(helpers.helper.handler)
-            .then((data) => {
-                console.log(data);
-            });
+        console.log(context);
     };
 
     const postLogin = function() {

@@ -8,7 +8,7 @@ const requester = function() {
 
     const post = function(url, headers) {
         headers.method = 'POST';
-        return makeRequest(baseUrl + url, headers);
+        return makeRequest(url, headers);
     };
 
     const put = function(url, headers) {
@@ -24,7 +24,7 @@ const requester = function() {
     const makeRequest = function(url, headers) {
         headers.headers['Content-Type'] = 'application/json';
         // TODO: Authorization Kinvey
-        fetch(url, headers);
+        return fetch(url, headers);
     };
 
     return {
