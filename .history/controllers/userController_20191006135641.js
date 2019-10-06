@@ -13,7 +13,7 @@ const userController = function() {
             header: '../views/common/header.hbs',
             footer: '../views/common/footer.hbs'
         }).then(function() {
-            this.partial('../views/login/loginPage.hbs');
+            this.partial('../views/register/loginPage.hbs');
         });
     };
 
@@ -21,14 +21,9 @@ const userController = function() {
 
     };
 
-    const postLogin = function() {
-
-    };
-
     return {
         getRegister,
         getLogin,
-        postRegister,
-        postLogin
+        postRegister
     }
 }();
