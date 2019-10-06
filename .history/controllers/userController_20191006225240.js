@@ -19,7 +19,7 @@ const userController = function() {
 
     const postRegister = function(context) {
         userModel.register(context.params)
-            .then(helper.handler)
+            .then(helpers.helper.handler)
             .then((data) => {
                 storage.saveUser(data);
                 context.redirect('#/home');
