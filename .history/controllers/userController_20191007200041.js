@@ -35,20 +35,10 @@ const userController = function() {
             });
     };
 
-    const logout = function() {
-        userModel.logout(context)
-            .then(helper.handler)
-            .then((data) => {
-                storage.deleteUser();
-                homeController.getHome(context);
-            });
-    };
-
     return {
         getRegister,
         getLogin,
         postRegister,
-        postLogin,
-        logout
+        postLogin
     }
 }();

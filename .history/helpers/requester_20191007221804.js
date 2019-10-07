@@ -22,11 +22,11 @@ const requester = function() {
     };
 
     const makeRequest = function(url, headers) {
-        headers['headers']['Content-Type'] = 'application/json';
+        headers.headers['Content-Type'] = 'application/json';
 
         if (storage.getData('userInfo') !== null) {
             const token = JSON.parse(storage.getData(authToken));
-            headers['headers']['Authorization'] = `Kinvey: ${token}`;
+            headers.headers['Authorization'] = `Kinvey: ${token}`;
         }
 
         fetch(url, headers);

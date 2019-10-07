@@ -1,10 +1,6 @@
 const homeController = function() {
     const getHome = function(context) {
-        const loggedIn = storage.getData('userInfo') !== null;
-        const username = JSON.parse(storage.getData('userInfo')).username;
-
-        context.loggedIn = loggedIn;
-        context.username = username;
+        context.loggedIn = storage.getData('userInfo') !== null;
 
         context.loadPartials({
             header: '../views/common/header.hbs',

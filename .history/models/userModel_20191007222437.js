@@ -42,7 +42,7 @@ const userModel = function() {
             headers: {}
         };
 
-        return requester.post(url, headers);
+        return requester.post(url, {});
     };
 
     return {
