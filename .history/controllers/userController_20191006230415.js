@@ -27,12 +27,7 @@ const userController = function() {
     };
 
     const postLogin = function(context) {
-        userModel.login(context.params)
-            .then(helper.handler)
-            .then((data) => {
-                storage.saveUser(data);
-                context.redirect('#/home');
-            });
+        console.log(context.params);
     };
 
     return {

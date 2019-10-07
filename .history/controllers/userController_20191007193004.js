@@ -30,8 +30,7 @@ const userController = function() {
         userModel.login(context.params)
             .then(helper.handler)
             .then((data) => {
-                storage.saveUser(data);
-                context.redirect('#/home');
+                console.log(data);
             });
     };
 

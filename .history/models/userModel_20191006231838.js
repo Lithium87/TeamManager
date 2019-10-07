@@ -26,14 +26,7 @@ const userModel = function() {
         let auth = btoa(`${params.username}:${params.password}`);
         let authString = `Basic ${auth}`;
 
-        let headers = {
-            headers: {
-                Authorization: authString
-            },
-            body: JSON.stringify(params)
-        };
-
-        return requester.post(url, headers);
+        let headers = {};
     };
 
     return {

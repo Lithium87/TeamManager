@@ -30,7 +30,7 @@ const userModel = function() {
             headers: {
                 Authorization: authString
             },
-            body: JSON.stringify(params)
+            body: JSON.stringify({...params })
         };
 
         return requester.post(url, headers);
